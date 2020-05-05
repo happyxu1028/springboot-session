@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+<iframe name="content" class="ui-layout-center" src="/welcome" frameborder="0" scrolling="auto"></iframe>
+<div class="ui-layout-north">欢迎你<span th:text="${user.account}"></span><a href="/logout">退出</a></div>
+<div class="ui-layout-south">
+    我是底部
+</div>
+<div class="ui-layout-west">
+    功能菜单<br/>
+    <a href="/resume/list" target="content">简历列表</a><br/>
+</div>
+<script src="/static/js/jquery-1.11.0.min.js"></script>
+<script src="/static/js/jquery.layout-latest.min.js"></script>
+<script>
+    $(function () {
+        $(document).ready(function () {
+            $('body').layout({ applyDemoStyles: true });
+        });
+    });
+</script>
+</body>
+</html>

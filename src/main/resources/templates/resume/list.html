@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>简历列表</title>
+    <link rel="stylesheet" href="/static/css/css.css">
+</head>
+<body>
+<a href="/resume/create">添加</a>
+<table class="table">
+    <thead>
+    <tr>
+        <th>id</th>
+        <th>地址</th>
+        <th>姓名</th>
+        <th>手机号</th>
+        <th>操作</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr th:each="resume:${resumes}">
+            <td th:text="${resume.id}"></td>
+            <td th:text="${resume.address}"></td>
+            <td th:text="${resume.name}"></td>
+            <td th:text="${resume.phone}"></td>
+            <td>
+                <a th:href="@{'/resume/'+${resume.id}+'/edit'}">编辑</a>
+                <a th:href="@{'/resume/'+${resume.id}+'/delete'}">删除</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>

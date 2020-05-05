@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>添加简历</title>
+</head>
+<body>
+<form action="/resume/update" method="post">
+    <input hidden name="id" th:value="${resume!=null?resume.id:''}" value="">
+    姓名：<input type="text" name="name" th:value="${resume!=null?resume.name:''}" value=""><br>
+    地址：<input type="text" name="address"  th:value="${resume!=null?resume.address:''}"  value=""><br>
+    手机号：<input type="text" name="phone"  th:value="${resume!=null?resume.phone:''}" value="">
+    <input type="submit" value="提交">
+</form>
+</body>
+</html>

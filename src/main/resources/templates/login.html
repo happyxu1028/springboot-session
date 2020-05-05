@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+</head>
+<body>
+<h2>登录</h2>
+我是服务器：<span th:text="${#request.getLocalPort()}"></span>
+sessionId：<span th:text="${#request.session.getId()}"></span>
+<form action="/login" method="post">
+    用户名：<input type="text" name="account" value="admin">
+    密码：<input type="password" name="password" value="admin">
+    <input type="submit" value="登录"/>
+</form>
+<font color="red"><span th:text="${msg}"></span></font>
+</body>
+</html>
