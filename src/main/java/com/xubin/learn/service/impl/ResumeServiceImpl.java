@@ -7,9 +7,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-/**
- * Created by liujunpeng on 2020/3/13.
- */
+
 @Service
 public class ResumeServiceImpl implements ResumeService {
     @Autowired
